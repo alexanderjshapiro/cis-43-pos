@@ -130,6 +130,16 @@ public class Grocery extends javax.swing.JFrame {
         jLayeredPane3 = new javax.swing.JLayeredPane();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
+        loginPanel = new javax.swing.JPanel();
+        loginArea = new javax.swing.JPanel();
+        usernameLabel = new javax.swing.JLabel();
+        passwordLabel = new javax.swing.JLabel();
+        fillerLabel = new javax.swing.JLabel();
+        usernameField = new javax.swing.JTextField();
+        passwordField = new javax.swing.JPasswordField();
+        submitButton = new javax.swing.JButton();
+        loginMessageLabel = new javax.swing.JLabel();
+        logOutButton = new javax.swing.JButton();
         FrameMenuPanel = new javax.swing.JPanel();
         registerButton = new javax.swing.JButton();
         logInButton = new javax.swing.JButton();
@@ -590,6 +600,68 @@ public class Grocery extends javax.swing.JFrame {
 
         mainPanels.add(managementPanel, "card3");
 
+        loginArea.setLayout(new java.awt.GridLayout(2, 3, 3, 3));
+
+        usernameLabel.setText("Username");
+        loginArea.add(usernameLabel);
+
+        passwordLabel.setText("Password");
+        loginArea.add(passwordLabel);
+        loginArea.add(fillerLabel);
+        loginArea.add(usernameField);
+        loginArea.add(passwordField);
+
+        submitButton.setText("Log In");
+        submitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitButtonActionPerformed(evt);
+            }
+        });
+        loginArea.add(submitButton);
+
+        loginMessageLabel.setFont(new java.awt.Font(".SF NS Text", 0, 24)); // NOI18N
+        loginMessageLabel.setText("Not logged in.");
+
+        logOutButton.setText("Log Out");
+        logOutButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logOutButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout loginPanelLayout = new javax.swing.GroupLayout(loginPanel);
+        loginPanel.setLayout(loginPanelLayout);
+        loginPanelLayout.setHorizontalGroup(
+            loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(loginPanelLayout.createSequentialGroup()
+                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(loginMessageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 903, Short.MAX_VALUE)
+                    .addGroup(loginPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(logOutButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(loginPanelLayout.createSequentialGroup()
+                    .addComponent(loginArea, javax.swing.GroupLayout.DEFAULT_SIZE, 903, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        loginPanelLayout.setVerticalGroup(
+            loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(loginPanelLayout.createSequentialGroup()
+                .addGap(145, 145, 145)
+                .addComponent(loginMessageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(logOutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(198, Short.MAX_VALUE))
+            .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(loginPanelLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(loginArea, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(413, Short.MAX_VALUE)))
+        );
+
+        mainPanels.add(loginPanel, "card3");
+
         FrameMenuPanel.setLayout(new java.awt.GridLayout(1, 0));
 
         registerButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
@@ -603,6 +675,11 @@ public class Grocery extends javax.swing.JFrame {
 
         logInButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login.png"))); // NOI18N
         logInButton.setText("LOG IN");
+        logInButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logInButtonActionPerformed(evt);
+            }
+        });
         FrameMenuPanel.add(logInButton);
 
         managementButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/settings.png"))); // NOI18N
@@ -619,14 +696,14 @@ public class Grocery extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(63, 63, 63)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(mainPanels, javax.swing.GroupLayout.PREFERRED_SIZE, 909, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(55, 55, 55)
                         .addComponent(FrameMenuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -709,6 +786,18 @@ public class Grocery extends javax.swing.JFrame {
     private void bulkButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bulkButtonActionPerformed
         switchPanels(bulkPanel);
     }//GEN-LAST:event_bulkButtonActionPerformed
+
+    private void logInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logInButtonActionPerformed
+        switchPanels2(loginPanel);
+    }//GEN-LAST:event_logInButtonActionPerformed
+
+    private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
+        if (passwordField.getPassword().length > 0) loginMessageLabel.setText("Logged in as: " + usernameField.getText());
+    }//GEN-LAST:event_submitButtonActionPerformed
+
+    private void logOutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logOutButtonActionPerformed
+        loginMessageLabel.setText("Successfully logged out.");
+    }//GEN-LAST:event_logOutButtonActionPerformed
     
     double subtotal=0;
     double tax=0;
@@ -807,6 +896,7 @@ public class Grocery extends javax.swing.JFrame {
     private javax.swing.JButton deliButton;
     private javax.swing.JPanel deliPanel;
     private javax.swing.JButton driedFruitButton;
+    private javax.swing.JLabel fillerLabel;
     private javax.swing.JButton flourButton;
     private javax.swing.JButton foodCourtButton;
     private javax.swing.JPanel foodCourtPanel;
@@ -841,6 +931,10 @@ public class Grocery extends javax.swing.JFrame {
     private javax.swing.JButton largeDrinkButton;
     private javax.swing.JButton lettuceButton;
     private javax.swing.JButton logInButton;
+    private javax.swing.JButton logOutButton;
+    private javax.swing.JPanel loginArea;
+    private javax.swing.JLabel loginMessageLabel;
+    private javax.swing.JPanel loginPanel;
     private javax.swing.JButton logo;
     private javax.swing.JPanel lowerMenuPanel;
     private javax.swing.JLayeredPane mainPanels;
@@ -853,6 +947,8 @@ public class Grocery extends javax.swing.JFrame {
     private javax.swing.JButton oatsButton;
     private javax.swing.JButton onionButton;
     private javax.swing.JButton orangeButton;
+    private javax.swing.JPasswordField passwordField;
+    private javax.swing.JLabel passwordLabel;
     private javax.swing.JButton peanutsButton;
     private javax.swing.JButton pepperJackButton;
     private javax.swing.JButton pineappleButton;
@@ -874,6 +970,7 @@ public class Grocery extends javax.swing.JFrame {
     private javax.swing.JButton spinachButton;
     private javax.swing.JButton strawberriesButton;
     private javax.swing.JLabel subTotalLabel;
+    private javax.swing.JButton submitButton;
     private javax.swing.JButton sugarButton;
     private javax.swing.JButton swissButton;
     private javax.swing.JLabel taxLabel;
@@ -883,6 +980,8 @@ public class Grocery extends javax.swing.JFrame {
     private javax.swing.JPanel unscannableItemsButtons;
     private javax.swing.JLabel unscannableItemsLabel;
     private javax.swing.JLayeredPane unscannableItemsPanels;
+    private javax.swing.JTextField usernameField;
+    private javax.swing.JLabel usernameLabel;
     private javax.swing.JButton watermelonButton;
     private javax.swing.JButton wheatLoafButton;
     private javax.swing.JButton whiteLoafButton;
