@@ -30,38 +30,83 @@ public class Grocery extends javax.swing.JFrame {
     private void initComponents() {
 
         logo = new javax.swing.JButton();
-        jLayeredPane2 = new javax.swing.JLayeredPane();
+        mainPanels = new javax.swing.JLayeredPane();
         registerPanel = new javax.swing.JPanel();
-        jPanelCategories = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jButtonProduce = new javax.swing.JButton();
-        jButtonFruit = new javax.swing.JButton();
-        jButtonFrozenFood = new javax.swing.JButton();
-        jButtonBakery = new javax.swing.JButton();
-        jButtonDrinks = new javax.swing.JButton();
-        jButtonCannedFood = new javax.swing.JButton();
-        jLayeredPane1 = new javax.swing.JLayeredPane();
+        unscannableItemsButtons = new javax.swing.JPanel();
+        unscannableItemsLabel = new javax.swing.JLabel();
+        produceButton = new javax.swing.JButton();
+        fruitButton = new javax.swing.JButton();
+        deliButton = new javax.swing.JButton();
+        bakeryButton = new javax.swing.JButton();
+        foodCourtButton = new javax.swing.JButton();
+        bulkButton = new javax.swing.JButton();
+        unscannableItemsPanels = new javax.swing.JLayeredPane();
+        producePanel = new javax.swing.JPanel();
+        cornButton = new javax.swing.JButton();
+        potatoButton = new javax.swing.JButton();
+        garlicButton = new javax.swing.JButton();
+        broccoliButton = new javax.swing.JButton();
+        carrotButton = new javax.swing.JButton();
+        cucumberButton = new javax.swing.JButton();
+        onionButton = new javax.swing.JButton();
+        greenBeanButton = new javax.swing.JButton();
+        lettuceButton = new javax.swing.JButton();
+        spinachButton = new javax.swing.JButton();
         fruitPanel = new javax.swing.JPanel();
         appleButton = new javax.swing.JButton();
-        pineappleButton = new javax.swing.JButton();
+        orangeButton = new javax.swing.JButton();
+        bananaButton = new javax.swing.JButton();
+        grapesButton = new javax.swing.JButton();
         strawberriesButton = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        frozenFoodPanel = new javax.swing.JPanel();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        producePanel = new javax.swing.JPanel();
-        potatoButton = new javax.swing.JButton();
-        lettuceButton = new javax.swing.JButton();
-        tomatoButton = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        cherriesButton = new javax.swing.JButton();
+        pineappleButton = new javax.swing.JButton();
+        watermelonButton = new javax.swing.JButton();
+        kiwiButton = new javax.swing.JButton();
+        mangoButton = new javax.swing.JButton();
+        deliPanel = new javax.swing.JPanel();
+        hamButton = new javax.swing.JButton();
+        turkeyButton = new javax.swing.JButton();
+        roastBeefButton = new javax.swing.JButton();
+        salamiButton = new javax.swing.JButton();
+        bolognaButton = new javax.swing.JButton();
+        cheddarButton = new javax.swing.JButton();
+        swissButton = new javax.swing.JButton();
+        pepperJackButton = new javax.swing.JButton();
+        mozzarellaButton = new javax.swing.JButton();
+        goudaButton = new javax.swing.JButton();
+        bakeryPanel = new javax.swing.JPanel();
+        whiteLoafButton = new javax.swing.JButton();
+        wheatLoafButton = new javax.swing.JButton();
+        ryeLoafButton = new javax.swing.JButton();
+        sourdoughLoafButton = new javax.swing.JButton();
+        baguetteButton = new javax.swing.JButton();
+        bagelButton = new javax.swing.JButton();
+        rollsButton = new javax.swing.JButton();
+        cookiesButton = new javax.swing.JButton();
+        muffinButton = new javax.swing.JButton();
+        cakeButton = new javax.swing.JButton();
+        foodCourtPanel = new javax.swing.JPanel();
+        pizzaSliceButton = new javax.swing.JButton();
+        wholePizzaButton = new javax.swing.JButton();
+        hotDogButton = new javax.swing.JButton();
+        sandwichButton = new javax.swing.JButton();
+        saladButton = new javax.swing.JButton();
+        soupButton = new javax.swing.JButton();
+        iceCreamButton = new javax.swing.JButton();
+        churrosButton = new javax.swing.JButton();
+        smallDrinkButton = new javax.swing.JButton();
+        largeDrinkButton = new javax.swing.JButton();
+        bulkPanel = new javax.swing.JPanel();
+        oatsButton = new javax.swing.JButton();
+        granolaButton = new javax.swing.JButton();
+        peanutsButton = new javax.swing.JButton();
+        almondsButton = new javax.swing.JButton();
+        cashewsButton = new javax.swing.JButton();
+        flourButton = new javax.swing.JButton();
+        sugarButton = new javax.swing.JButton();
+        trailMixButton = new javax.swing.JButton();
+        driedFruitButton = new javax.swing.JButton();
+        candyButton = new javax.swing.JButton();
         jPanelTotal = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -99,61 +144,119 @@ public class Grocery extends javax.swing.JFrame {
             }
         });
 
-        jLayeredPane2.setLayout(new java.awt.CardLayout());
+        mainPanels.setLayout(new java.awt.CardLayout());
 
-        jPanelCategories.setLayout(new java.awt.GridLayout(0, 1, 3, 3));
+        unscannableItemsButtons.setLayout(new java.awt.GridLayout(0, 1, 3, 3));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel1.setText("CATEGORIES");
-        jPanelCategories.add(jLabel1);
+        unscannableItemsLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        unscannableItemsLabel.setForeground(new java.awt.Color(0, 0, 102));
+        unscannableItemsLabel.setText("CATEGORIES");
+        unscannableItemsButtons.add(unscannableItemsLabel);
 
-        jButtonProduce.setBackground(new java.awt.Color(255, 204, 0));
-        jButtonProduce.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonProduce.setText("PRODUCE");
-        jButtonProduce.addActionListener(new java.awt.event.ActionListener() {
+        produceButton.setBackground(new java.awt.Color(255, 204, 0));
+        produceButton.setText("PRODUCE");
+        produceButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonProduceActionPerformed(evt);
+                produceButtonActionPerformed(evt);
             }
         });
-        jPanelCategories.add(jButtonProduce);
+        unscannableItemsButtons.add(produceButton);
 
-        jButtonFruit.setBackground(new java.awt.Color(255, 204, 0));
-        jButtonFruit.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonFruit.setText("FRUIT");
-        jButtonFruit.addActionListener(new java.awt.event.ActionListener() {
+        fruitButton.setBackground(new java.awt.Color(255, 204, 0));
+        fruitButton.setText("FRUIT");
+        fruitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonFruitActionPerformed(evt);
+                fruitButtonActionPerformed(evt);
             }
         });
-        jPanelCategories.add(jButtonFruit);
+        unscannableItemsButtons.add(fruitButton);
 
-        jButtonFrozenFood.setBackground(new java.awt.Color(255, 204, 0));
-        jButtonFrozenFood.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonFrozenFood.setText("FROZEN FOOD");
-        jButtonFrozenFood.addActionListener(new java.awt.event.ActionListener() {
+        deliButton.setBackground(new java.awt.Color(255, 204, 0));
+        deliButton.setText("DELI");
+        deliButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonFrozenFoodActionPerformed(evt);
+                deliButtonActionPerformed(evt);
             }
         });
-        jPanelCategories.add(jButtonFrozenFood);
+        unscannableItemsButtons.add(deliButton);
 
-        jButtonBakery.setBackground(new java.awt.Color(255, 204, 0));
-        jButtonBakery.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonBakery.setText("BAKERY");
-        jPanelCategories.add(jButtonBakery);
+        bakeryButton.setBackground(new java.awt.Color(255, 204, 0));
+        bakeryButton.setText("BAKERY");
+        bakeryButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bakeryButtonActionPerformed(evt);
+            }
+        });
+        unscannableItemsButtons.add(bakeryButton);
 
-        jButtonDrinks.setBackground(new java.awt.Color(255, 204, 0));
-        jButtonDrinks.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonDrinks.setText("DRINKS");
-        jPanelCategories.add(jButtonDrinks);
+        foodCourtButton.setBackground(new java.awt.Color(255, 204, 0));
+        foodCourtButton.setText("FOOD COURT");
+        foodCourtButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                foodCourtButtonActionPerformed(evt);
+            }
+        });
+        unscannableItemsButtons.add(foodCourtButton);
 
-        jButtonCannedFood.setBackground(new java.awt.Color(255, 204, 0));
-        jButtonCannedFood.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonCannedFood.setText("CANNED FOOD");
-        jPanelCategories.add(jButtonCannedFood);
+        bulkButton.setBackground(new java.awt.Color(255, 204, 0));
+        bulkButton.setText("BULK");
+        bulkButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bulkButtonActionPerformed(evt);
+            }
+        });
+        unscannableItemsButtons.add(bulkButton);
 
-        jLayeredPane1.setLayout(new java.awt.CardLayout());
+        unscannableItemsPanels.setLayout(new java.awt.CardLayout());
+
+        producePanel.setLayout(new java.awt.GridLayout(5, 5, 15, 15));
+
+        cornButton.setText("Corn");
+        cornButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cornButtonActionPerformed(evt);
+            }
+        });
+        producePanel.add(cornButton);
+
+        potatoButton.setText("Potato");
+        potatoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                potatoButtonActionPerformed(evt);
+            }
+        });
+        producePanel.add(potatoButton);
+
+        garlicButton.setText("Garlic");
+        producePanel.add(garlicButton);
+
+        broccoliButton.setText("Broccoli");
+        broccoliButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                broccoliButtonActionPerformed(evt);
+            }
+        });
+        producePanel.add(broccoliButton);
+
+        carrotButton.setText("Carrot");
+        producePanel.add(carrotButton);
+
+        cucumberButton.setText("Cucumber");
+        producePanel.add(cucumberButton);
+
+        onionButton.setText("Onion");
+        producePanel.add(onionButton);
+
+        greenBeanButton.setText("Green Bean");
+        producePanel.add(greenBeanButton);
+
+        lettuceButton.setText("Lettuce");
+        producePanel.add(lettuceButton);
+
+        spinachButton.setText("Spinach");
+        producePanel.add(spinachButton);
+
+        unscannableItemsPanels.add(producePanel, "card2");
 
         fruitPanel.setLayout(new java.awt.GridLayout(5, 5, 15, 15));
 
@@ -165,81 +268,180 @@ public class Grocery extends javax.swing.JFrame {
         });
         fruitPanel.add(appleButton);
 
-        pineappleButton.setText("Pineapple");
-        pineappleButton.addActionListener(new java.awt.event.ActionListener() {
+        orangeButton.setText("Orange");
+        orangeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pineappleButtonActionPerformed(evt);
+                orangeButtonActionPerformed(evt);
             }
         });
-        fruitPanel.add(pineappleButton);
+        fruitPanel.add(orangeButton);
+
+        bananaButton.setText("Banana");
+        fruitPanel.add(bananaButton);
+
+        grapesButton.setText("Grapes");
+        fruitPanel.add(grapesButton);
 
         strawberriesButton.setText("Strawberries");
         fruitPanel.add(strawberriesButton);
 
-        jButton10.setText("jButton1");
-        fruitPanel.add(jButton10);
+        cherriesButton.setText("Cherries");
+        fruitPanel.add(cherriesButton);
 
-        jButton11.setText("jButton1");
-        fruitPanel.add(jButton11);
+        pineappleButton.setText("Pineapple");
+        fruitPanel.add(pineappleButton);
 
-        jButton12.setText("jButton1");
-        fruitPanel.add(jButton12);
+        watermelonButton.setText("Watermelon");
+        fruitPanel.add(watermelonButton);
 
-        jLayeredPane1.add(fruitPanel, "card2");
+        kiwiButton.setText("Kiwi");
+        fruitPanel.add(kiwiButton);
 
-        frozenFoodPanel.setLayout(new java.awt.GridLayout(5, 5, 15, 15));
+        mangoButton.setText("Mango");
+        fruitPanel.add(mangoButton);
 
-        jButton13.setText("Fozen Pizza");
-        frozenFoodPanel.add(jButton13);
+        unscannableItemsPanels.add(fruitPanel, "card2");
 
-        jButton14.setText("jButton1");
-        frozenFoodPanel.add(jButton14);
+        deliPanel.setLayout(new java.awt.GridLayout(5, 5, 15, 15));
 
-        jButton15.setText("jButton1");
-        frozenFoodPanel.add(jButton15);
+        hamButton.setText("Ham");
+        deliPanel.add(hamButton);
 
-        jButton16.setText("jButton1");
-        frozenFoodPanel.add(jButton16);
+        turkeyButton.setText("Turkey");
+        deliPanel.add(turkeyButton);
 
-        jButton17.setText("jButton1");
-        frozenFoodPanel.add(jButton17);
+        roastBeefButton.setText("Roast Beef");
+        deliPanel.add(roastBeefButton);
 
-        jButton18.setText("jButton1");
-        frozenFoodPanel.add(jButton18);
+        salamiButton.setText("Salami");
+        deliPanel.add(salamiButton);
 
-        jLayeredPane1.add(frozenFoodPanel, "card2");
+        bolognaButton.setText("Bologna");
+        deliPanel.add(bolognaButton);
 
-        producePanel.setLayout(new java.awt.GridLayout(5, 5, 15, 15));
+        cheddarButton.setText("Cheddar");
+        deliPanel.add(cheddarButton);
 
-        potatoButton.setText("Potato");
-        potatoButton.addActionListener(new java.awt.event.ActionListener() {
+        swissButton.setText("Swiss");
+        deliPanel.add(swissButton);
+
+        pepperJackButton.setText("Pepper Jack");
+        deliPanel.add(pepperJackButton);
+
+        mozzarellaButton.setText("Mozzarella");
+        deliPanel.add(mozzarellaButton);
+
+        goudaButton.setText("Gouda");
+        deliPanel.add(goudaButton);
+
+        unscannableItemsPanels.add(deliPanel, "card2");
+
+        bakeryPanel.setLayout(new java.awt.GridLayout(5, 5, 15, 15));
+
+        whiteLoafButton.setText("White Loaf");
+        bakeryPanel.add(whiteLoafButton);
+
+        wheatLoafButton.setText("Wheat Loaf");
+        bakeryPanel.add(wheatLoafButton);
+
+        ryeLoafButton.setText("Rye Loaf");
+        bakeryPanel.add(ryeLoafButton);
+
+        sourdoughLoafButton.setText("Sourdough Loaf");
+        bakeryPanel.add(sourdoughLoafButton);
+
+        baguetteButton.setText("Baguette");
+        bakeryPanel.add(baguetteButton);
+
+        bagelButton.setText("Bagel");
+        bakeryPanel.add(bagelButton);
+
+        rollsButton.setText("Rolls");
+        bakeryPanel.add(rollsButton);
+
+        cookiesButton.setText("Cookies");
+        bakeryPanel.add(cookiesButton);
+
+        muffinButton.setText("Muffin");
+        bakeryPanel.add(muffinButton);
+
+        cakeButton.setText("Cake");
+        bakeryPanel.add(cakeButton);
+
+        unscannableItemsPanels.add(bakeryPanel, "card2");
+
+        foodCourtPanel.setLayout(new java.awt.GridLayout(5, 5, 15, 15));
+
+        pizzaSliceButton.setText("Pizza Slice");
+        foodCourtPanel.add(pizzaSliceButton);
+
+        wholePizzaButton.setText("Whole Pizza");
+        wholePizzaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                potatoButtonActionPerformed(evt);
+                wholePizzaButtonActionPerformed(evt);
             }
         });
-        producePanel.add(potatoButton);
+        foodCourtPanel.add(wholePizzaButton);
 
-        lettuceButton.setText("Lettuce");
-        lettuceButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lettuceButtonActionPerformed(evt);
-            }
-        });
-        producePanel.add(lettuceButton);
+        hotDogButton.setText("Hot Dog");
+        foodCourtPanel.add(hotDogButton);
 
-        tomatoButton.setText("Tomato");
-        producePanel.add(tomatoButton);
+        sandwichButton.setText("Sandwich");
+        foodCourtPanel.add(sandwichButton);
 
-        jButton4.setText("jButton1");
-        producePanel.add(jButton4);
+        saladButton.setText("Salad");
+        foodCourtPanel.add(saladButton);
 
-        jButton5.setText("jButton1");
-        producePanel.add(jButton5);
+        soupButton.setText("Soup");
+        foodCourtPanel.add(soupButton);
 
-        jButton6.setText("jButton1");
-        producePanel.add(jButton6);
+        iceCreamButton.setText("Ice Cream");
+        foodCourtPanel.add(iceCreamButton);
 
-        jLayeredPane1.add(producePanel, "card2");
+        churrosButton.setText("Churros");
+        foodCourtPanel.add(churrosButton);
+
+        smallDrinkButton.setText("Small Drink");
+        foodCourtPanel.add(smallDrinkButton);
+
+        largeDrinkButton.setText("Large Drink");
+        foodCourtPanel.add(largeDrinkButton);
+
+        unscannableItemsPanels.add(foodCourtPanel, "card2");
+
+        bulkPanel.setLayout(new java.awt.GridLayout(5, 5, 15, 15));
+
+        oatsButton.setText("Oats");
+        bulkPanel.add(oatsButton);
+
+        granolaButton.setText("Granola");
+        bulkPanel.add(granolaButton);
+
+        peanutsButton.setText("Peanuts");
+        bulkPanel.add(peanutsButton);
+
+        almondsButton.setText("Almonds");
+        bulkPanel.add(almondsButton);
+
+        cashewsButton.setText("Cashews");
+        bulkPanel.add(cashewsButton);
+
+        flourButton.setText("Flour");
+        bulkPanel.add(flourButton);
+
+        sugarButton.setText("Sugar");
+        bulkPanel.add(sugarButton);
+
+        trailMixButton.setText("Trail Mix");
+        bulkPanel.add(trailMixButton);
+
+        driedFruitButton.setText("Dried Fruit");
+        bulkPanel.add(driedFruitButton);
+
+        candyButton.setText("Candy");
+        bulkPanel.add(candyButton);
+
+        unscannableItemsPanels.add(bulkPanel, "card2");
 
         jPanelTotal.setLayout(new java.awt.GridLayout(2, 3, 5, 5));
 
@@ -292,14 +494,14 @@ public class Grocery extends javax.swing.JFrame {
                 .addGap(46, 46, 46)
                 .addGroup(registerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(registerPanelLayout.createSequentialGroup()
-                        .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE))
+                        .addComponent(unscannableItemsPanels, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 178, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, registerPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(lowerMenuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(jPanelCategories, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55))
+                .addComponent(unscannableItemsButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         registerPanelLayout.setVerticalGroup(
             registerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -307,13 +509,13 @@ public class Grocery extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(registerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, registerPanelLayout.createSequentialGroup()
-                        .addComponent(jPanelCategories, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(unscannableItemsButtons, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(registerPanelLayout.createSequentialGroup()
                         .addGroup(registerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                            .addComponent(unscannableItemsPanels, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                         .addGroup(registerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanelTotal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, registerPanelLayout.createSequentialGroup()
@@ -321,7 +523,7 @@ public class Grocery extends javax.swing.JFrame {
                                 .addContainerGap())))))
         );
 
-        jLayeredPane2.add(registerPanel, "card2");
+        mainPanels.add(registerPanel, "card2");
 
         menuPanel.setLayout(new java.awt.GridLayout(1, 0, 5, 5));
 
@@ -386,7 +588,7 @@ public class Grocery extends javax.swing.JFrame {
                 .addContainerGap(306, Short.MAX_VALUE))
         );
 
-        jLayeredPane2.add(managementPanel, "card3");
+        mainPanels.add(managementPanel, "card3");
 
         FrameMenuPanel.setLayout(new java.awt.GridLayout(1, 0));
 
@@ -419,7 +621,7 @@ public class Grocery extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(63, 63, 63)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 909, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mainPanels, javax.swing.GroupLayout.PREFERRED_SIZE, 909, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(55, 55, 55)
@@ -434,7 +636,7 @@ public class Grocery extends javax.swing.JFrame {
                     .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(FrameMenuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(7, 7, 7)
-                .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(mainPanels, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -445,35 +647,32 @@ public class Grocery extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_logoActionPerformed
 
-    private void jButtonFruitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFruitActionPerformed
-        // TODO add your handling code here:
+    private void fruitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fruitButtonActionPerformed
         switchPanels(fruitPanel);
-    }//GEN-LAST:event_jButtonFruitActionPerformed
+    }//GEN-LAST:event_fruitButtonActionPerformed
 
     private void appleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_appleButtonActionPerformed
-        // TODO add your handling code here:
         jTextArea1.append(apple.toString());
         updateTotal(apple.getPrice());
     }//GEN-LAST:event_appleButtonActionPerformed
 
-    private void potatoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_potatoButtonActionPerformed
-        // TODO add your handling code here:
-        jTextArea1.append(potato.toString());
-        updateTotal(potato.getPrice());
+    private void cornButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cornButtonActionPerformed
+        jTextArea1.append(corn.toString());
+        updateTotal(corn.getPrice());
         //subTotalLabel.setText(String.format("%.2f", potato.getPrice()));
-    }//GEN-LAST:event_potatoButtonActionPerformed
+    }//GEN-LAST:event_cornButtonActionPerformed
 
-    private void jButtonProduceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonProduceActionPerformed
+    private void produceButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produceButtonActionPerformed
         switchPanels(producePanel);
-    }//GEN-LAST:event_jButtonProduceActionPerformed
+    }//GEN-LAST:event_produceButtonActionPerformed
 
-    private void jButtonFrozenFoodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFrozenFoodActionPerformed
-        switchPanels(frozenFoodPanel);
-    }//GEN-LAST:event_jButtonFrozenFoodActionPerformed
+    private void deliButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deliButtonActionPerformed
+        switchPanels(deliPanel);
+    }//GEN-LAST:event_deliButtonActionPerformed
 
-    private void pineappleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pineappleButtonActionPerformed
+    private void orangeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orangeButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_pineappleButtonActionPerformed
+    }//GEN-LAST:event_orangeButtonActionPerformed
 
     private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
         // TODO add your handling code here:
@@ -485,34 +684,60 @@ public class Grocery extends javax.swing.JFrame {
         switchPanels2(managementPanel);
     }//GEN-LAST:event_managementButtonActionPerformed
 
-    private void lettuceButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lettuceButtonActionPerformed
+    private void potatoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_potatoButtonActionPerformed
         // TODO add your handling code here:
-        jTextArea1.append(lettuce.toString());
-        updateTotal(lettuce.getPrice());
-    }//GEN-LAST:event_lettuceButtonActionPerformed
+        jTextArea1.append(potato.toString());
+        updateTotal(potato.getPrice());
+    }//GEN-LAST:event_potatoButtonActionPerformed
+
+    private void broccoliButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_broccoliButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_broccoliButtonActionPerformed
+
+    private void wholePizzaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wholePizzaButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_wholePizzaButtonActionPerformed
+
+    private void bakeryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bakeryButtonActionPerformed
+        switchPanels(bakeryPanel);
+    }//GEN-LAST:event_bakeryButtonActionPerformed
+
+    private void foodCourtButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_foodCourtButtonActionPerformed
+        switchPanels(foodCourtPanel);
+    }//GEN-LAST:event_foodCourtButtonActionPerformed
+
+    private void bulkButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bulkButtonActionPerformed
+        switchPanels(bulkPanel);
+    }//GEN-LAST:event_bulkButtonActionPerformed
     
     double subtotal=0;
     double tax=0;
     double total=0;
     Item potato = new Item("Potato","0001", 0.99,25);
     Item lettuce = new Item("Lettuce", "0002", 1.05, 39);
-    Item apple = new Item("Apple","003", 0.50, 100);
+    Item apple = new Item("Apple","0003", 0.50, 100);
+    Item corn = new Item("Corn","0004", 0.50, 100);
+    //Item i = new Item("i","0005", 0.50, 100);
+    //Item i = new Item("i","0006", 0.50, 100);
+    //Item i = new Item("i","0007", 0.50, 100);
+    //Item i = new Item("i","0008", 0.50, 100);
+    //Item i = new Item("i","0009", 0.50, 100);
     /**
      * @param args the command line arguments
      */
     public void switchPanels(JPanel panel)
     {
-        jLayeredPane1.removeAll();
-        jLayeredPane1.add(panel);
-        jLayeredPane1.repaint();
-        jLayeredPane1.revalidate();
+        unscannableItemsPanels.removeAll();
+        unscannableItemsPanels.add(panel);
+        unscannableItemsPanels.repaint();
+        unscannableItemsPanels.revalidate();
     }
     public void switchPanels2(JPanel panel)
     {
-        jLayeredPane2.removeAll();
-        jLayeredPane2.add(panel);
-        jLayeredPane2.repaint();
-        jLayeredPane2.revalidate();
+        mainPanels.removeAll();
+        mainPanels.add(panel);
+        mainPanels.repaint();
+        mainPanels.revalidate();
     }
     public void updateTotal(double price)
     {
@@ -558,64 +783,109 @@ public class Grocery extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel FrameMenuPanel;
+    private javax.swing.JButton almondsButton;
     private javax.swing.JButton appleButton;
-    private javax.swing.JPanel frozenFoodPanel;
+    private javax.swing.JButton bagelButton;
+    private javax.swing.JButton baguetteButton;
+    private javax.swing.JButton bakeryButton;
+    private javax.swing.JPanel bakeryPanel;
+    private javax.swing.JButton bananaButton;
+    private javax.swing.JButton bolognaButton;
+    private javax.swing.JButton broccoliButton;
+    private javax.swing.JButton bulkButton;
+    private javax.swing.JPanel bulkPanel;
+    private javax.swing.JButton cakeButton;
+    private javax.swing.JButton candyButton;
+    private javax.swing.JButton carrotButton;
+    private javax.swing.JButton cashewsButton;
+    private javax.swing.JButton cheddarButton;
+    private javax.swing.JButton cherriesButton;
+    private javax.swing.JButton churrosButton;
+    private javax.swing.JButton cookiesButton;
+    private javax.swing.JButton cornButton;
+    private javax.swing.JButton cucumberButton;
+    private javax.swing.JButton deliButton;
+    private javax.swing.JPanel deliPanel;
+    private javax.swing.JButton driedFruitButton;
+    private javax.swing.JButton flourButton;
+    private javax.swing.JButton foodCourtButton;
+    private javax.swing.JPanel foodCourtPanel;
+    private javax.swing.JButton fruitButton;
     private javax.swing.JPanel fruitPanel;
+    private javax.swing.JButton garlicButton;
+    private javax.swing.JButton goudaButton;
+    private javax.swing.JButton granolaButton;
+    private javax.swing.JButton grapesButton;
+    private javax.swing.JButton greenBeanButton;
+    private javax.swing.JButton hamButton;
+    private javax.swing.JButton hotDogButton;
+    private javax.swing.JButton iceCreamButton;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JButton jButtonBakery;
-    private javax.swing.JButton jButtonCannedFood;
-    private javax.swing.JButton jButtonDrinks;
-    private javax.swing.JButton jButtonFrozenFood;
-    private javax.swing.JButton jButtonFruit;
-    private javax.swing.JButton jButtonProduce;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLayeredPane jLayeredPane1;
-    private javax.swing.JLayeredPane jLayeredPane2;
     private javax.swing.JLayeredPane jLayeredPane3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanelCategories;
     private javax.swing.JPanel jPanelTotal;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JButton kiwiButton;
+    private javax.swing.JButton largeDrinkButton;
     private javax.swing.JButton lettuceButton;
     private javax.swing.JButton logInButton;
     private javax.swing.JButton logo;
     private javax.swing.JPanel lowerMenuPanel;
+    private javax.swing.JLayeredPane mainPanels;
     private javax.swing.JButton managementButton;
     private javax.swing.JPanel managementPanel;
+    private javax.swing.JButton mangoButton;
     private javax.swing.JPanel menuPanel;
+    private javax.swing.JButton mozzarellaButton;
+    private javax.swing.JButton muffinButton;
+    private javax.swing.JButton oatsButton;
+    private javax.swing.JButton onionButton;
+    private javax.swing.JButton orangeButton;
+    private javax.swing.JButton peanutsButton;
+    private javax.swing.JButton pepperJackButton;
     private javax.swing.JButton pineappleButton;
+    private javax.swing.JButton pizzaSliceButton;
     private javax.swing.JButton potatoButton;
+    private javax.swing.JButton produceButton;
     private javax.swing.JPanel producePanel;
     private javax.swing.JButton registerButton;
     private javax.swing.JPanel registerPanel;
+    private javax.swing.JButton roastBeefButton;
+    private javax.swing.JButton rollsButton;
+    private javax.swing.JButton ryeLoafButton;
+    private javax.swing.JButton saladButton;
+    private javax.swing.JButton salamiButton;
+    private javax.swing.JButton sandwichButton;
+    private javax.swing.JButton smallDrinkButton;
+    private javax.swing.JButton soupButton;
+    private javax.swing.JButton sourdoughLoafButton;
+    private javax.swing.JButton spinachButton;
     private javax.swing.JButton strawberriesButton;
     private javax.swing.JLabel subTotalLabel;
+    private javax.swing.JButton sugarButton;
+    private javax.swing.JButton swissButton;
     private javax.swing.JLabel taxLabel;
-    private javax.swing.JButton tomatoButton;
     private javax.swing.JLabel totalLabel;
+    private javax.swing.JButton trailMixButton;
+    private javax.swing.JButton turkeyButton;
+    private javax.swing.JPanel unscannableItemsButtons;
+    private javax.swing.JLabel unscannableItemsLabel;
+    private javax.swing.JLayeredPane unscannableItemsPanels;
+    private javax.swing.JButton watermelonButton;
+    private javax.swing.JButton wheatLoafButton;
+    private javax.swing.JButton whiteLoafButton;
+    private javax.swing.JButton wholePizzaButton;
     // End of variables declaration//GEN-END:variables
 }

@@ -26,7 +26,7 @@
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jLayeredPane2" min="-2" pref="909" max="-2" attributes="0"/>
+                  <Component id="mainPanels" min="-2" pref="909" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Component id="logo" min="-2" pref="325" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
@@ -46,7 +46,7 @@
                   <Component id="FrameMenuPanel" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-              <Component id="jLayeredPane2" min="-2" pref="532" max="-2" attributes="0"/>
+              <Component id="mainPanels" min="-2" pref="532" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -63,7 +63,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logoActionPerformed"/>
       </Events>
     </Component>
-    <Container class="javax.swing.JLayeredPane" name="jLayeredPane2">
+    <Container class="javax.swing.JLayeredPane" name="mainPanels">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
       <SubComponents>
@@ -86,8 +86,8 @@
                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jLayeredPane1" min="-2" pref="362" max="-2" attributes="0"/>
-                              <EmptySpace pref="66" max="32767" attributes="0"/>
+                              <Component id="unscannableItemsPanels" min="-2" pref="362" max="-2" attributes="0"/>
+                              <EmptySpace pref="178" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -95,8 +95,8 @@
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="jPanelCategories" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                      <Component id="unscannableItemsButtons" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -106,15 +106,15 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="jPanelCategories" min="-2" pref="466" max="-2" attributes="0"/>
+                              <Component id="unscannableItemsButtons" min="-2" pref="466" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="jScrollPane1" min="-2" pref="402" max="-2" attributes="0"/>
-                                  <Component id="jLayeredPane1" min="-2" pref="324" max="-2" attributes="0"/>
+                                  <Component id="unscannableItemsPanels" min="-2" pref="324" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="25" max="32767" attributes="0"/>
+                              <EmptySpace pref="35" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jPanelTotal" alignment="1" min="-2" pref="57" max="-2" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
@@ -129,7 +129,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="jPanelCategories">
+            <Container class="javax.swing.JPanel" name="unscannableItemsButtons">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
                 <Property name="columns" type="int" value="1"/>
@@ -138,7 +138,7 @@
                 <Property name="verticalGap" type="int" value="3"/>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel1">
+                <Component class="javax.swing.JLabel" name="unscannableItemsLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="1"/>
@@ -149,87 +149,153 @@
                     <Property name="text" type="java.lang.String" value="CATEGORIES"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButtonProduce">
+                <Component class="javax.swing.JButton" name="produceButton">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="cc" red="ff" type="rgb"/>
-                    </Property>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="PRODUCE"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonProduceActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="produceButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButtonFruit">
+                <Component class="javax.swing.JButton" name="fruitButton">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="cc" red="ff" type="rgb"/>
-                    </Property>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="FRUIT"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonFruitActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fruitButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButtonFrozenFood">
+                <Component class="javax.swing.JButton" name="deliButton">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="cc" red="ff" type="rgb"/>
                     </Property>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="FROZEN FOOD"/>
+                    <Property name="text" type="java.lang.String" value="DELI"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonFrozenFoodActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deliButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButtonBakery">
+                <Component class="javax.swing.JButton" name="bakeryButton">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="cc" red="ff" type="rgb"/>
-                    </Property>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="BAKERY"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bakeryButtonActionPerformed"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButtonDrinks">
+                <Component class="javax.swing.JButton" name="foodCourtButton">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="cc" red="ff" type="rgb"/>
                     </Property>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="DRINKS"/>
+                    <Property name="text" type="java.lang.String" value="FOOD COURT"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="foodCourtButtonActionPerformed"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButtonCannedFood">
+                <Component class="javax.swing.JButton" name="bulkButton">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="cc" red="ff" type="rgb"/>
                     </Property>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="CANNED FOOD"/>
+                    <Property name="text" type="java.lang.String" value="BULK"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bulkButtonActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JLayeredPane" name="jLayeredPane1">
+            <Container class="javax.swing.JLayeredPane" name="unscannableItemsPanels">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
               <SubComponents>
+                <Container class="javax.swing.JPanel" name="producePanel">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                      <CardConstraints cardName="card2"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+                    <Property name="columns" type="int" value="5"/>
+                    <Property name="horizontalGap" type="int" value="15"/>
+                    <Property name="rows" type="int" value="5"/>
+                    <Property name="verticalGap" type="int" value="15"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JButton" name="cornButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Corn"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cornButtonActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="potatoButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Potato"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="potatoButtonActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="garlicButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Garlic"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="broccoliButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Broccoli"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="broccoliButtonActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="carrotButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Carrot"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="cucumberButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Cucumber"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="onionButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Onion"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="greenBeanButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Green Bean"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="lettuceButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Lettuce"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="spinachButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Spinach"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
                 <Container class="javax.swing.JPanel" name="fruitPanel">
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
@@ -252,37 +318,57 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="appleButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="pineappleButton">
+                    <Component class="javax.swing.JButton" name="orangeButton">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Pineapple"/>
+                        <Property name="text" type="java.lang.String" value="Orange"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pineappleButtonActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="orangeButtonActionPerformed"/>
                       </Events>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="bananaButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Banana"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="grapesButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Grapes"/>
+                      </Properties>
                     </Component>
                     <Component class="javax.swing.JButton" name="strawberriesButton">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Strawberries"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton10">
+                    <Component class="javax.swing.JButton" name="cherriesButton">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
+                        <Property name="text" type="java.lang.String" value="Cherries"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton11">
+                    <Component class="javax.swing.JButton" name="pineappleButton">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
+                        <Property name="text" type="java.lang.String" value="Pineapple"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton12">
+                    <Component class="javax.swing.JButton" name="watermelonButton">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
+                        <Property name="text" type="java.lang.String" value="Watermelon"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="kiwiButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Kiwi"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="mangoButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Mango"/>
                       </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="javax.swing.JPanel" name="frozenFoodPanel">
+                <Container class="javax.swing.JPanel" name="deliPanel">
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
                       <CardConstraints cardName="card2"/>
@@ -296,39 +382,59 @@
                     <Property name="verticalGap" type="int" value="15"/>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JButton" name="jButton13">
+                    <Component class="javax.swing.JButton" name="hamButton">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Fozen Pizza"/>
+                        <Property name="text" type="java.lang.String" value="Ham"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton14">
+                    <Component class="javax.swing.JButton" name="turkeyButton">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
+                        <Property name="text" type="java.lang.String" value="Turkey"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton15">
+                    <Component class="javax.swing.JButton" name="roastBeefButton">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
+                        <Property name="text" type="java.lang.String" value="Roast Beef"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton16">
+                    <Component class="javax.swing.JButton" name="salamiButton">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
+                        <Property name="text" type="java.lang.String" value="Salami"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton17">
+                    <Component class="javax.swing.JButton" name="bolognaButton">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
+                        <Property name="text" type="java.lang.String" value="Bologna"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton18">
+                    <Component class="javax.swing.JButton" name="cheddarButton">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
+                        <Property name="text" type="java.lang.String" value="Cheddar"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="swissButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Swiss"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="pepperJackButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Pepper Jack"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="mozzarellaButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Mozzarella"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="goudaButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Gouda"/>
                       </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="javax.swing.JPanel" name="producePanel">
+                <Container class="javax.swing.JPanel" name="bakeryPanel">
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
                       <CardConstraints cardName="card2"/>
@@ -342,40 +448,189 @@
                     <Property name="verticalGap" type="int" value="15"/>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JButton" name="potatoButton">
+                    <Component class="javax.swing.JButton" name="whiteLoafButton">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Potato"/>
+                        <Property name="text" type="java.lang.String" value="White Loaf"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="wheatLoafButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Wheat Loaf"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="ryeLoafButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Rye Loaf"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="sourdoughLoafButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Sourdough Loaf"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="baguetteButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Baguette"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="bagelButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Bagel"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="rollsButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Rolls"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="cookiesButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Cookies"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="muffinButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Muffin"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="cakeButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Cake"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="foodCourtPanel">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                      <CardConstraints cardName="card2"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+                    <Property name="columns" type="int" value="5"/>
+                    <Property name="horizontalGap" type="int" value="15"/>
+                    <Property name="rows" type="int" value="5"/>
+                    <Property name="verticalGap" type="int" value="15"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JButton" name="pizzaSliceButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Pizza Slice"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="wholePizzaButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Whole Pizza"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="potatoButtonActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wholePizzaButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="lettuceButton">
+                    <Component class="javax.swing.JButton" name="hotDogButton">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Lettuce"/>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lettuceButtonActionPerformed"/>
-                      </Events>
-                    </Component>
-                    <Component class="javax.swing.JButton" name="tomatoButton">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Tomato"/>
+                        <Property name="text" type="java.lang.String" value="Hot Dog"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton4">
+                    <Component class="javax.swing.JButton" name="sandwichButton">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
+                        <Property name="text" type="java.lang.String" value="Sandwich"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton5">
+                    <Component class="javax.swing.JButton" name="saladButton">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
+                        <Property name="text" type="java.lang.String" value="Salad"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton6">
+                    <Component class="javax.swing.JButton" name="soupButton">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="jButton1"/>
+                        <Property name="text" type="java.lang.String" value="Soup"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="iceCreamButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Ice Cream"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="churrosButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Churros"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="smallDrinkButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Small Drink"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="largeDrinkButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Large Drink"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="bulkPanel">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                      <CardConstraints cardName="card2"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+                    <Property name="columns" type="int" value="5"/>
+                    <Property name="horizontalGap" type="int" value="15"/>
+                    <Property name="rows" type="int" value="5"/>
+                    <Property name="verticalGap" type="int" value="15"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JButton" name="oatsButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Oats"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="granolaButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Granola"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="peanutsButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Peanuts"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="almondsButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Almonds"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="cashewsButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Cashews"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="flourButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Flour"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="sugarButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Sugar"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="trailMixButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Trail Mix"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="driedFruitButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Dried Fruit"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="candyButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Candy"/>
                       </Properties>
                     </Component>
                   </SubComponents>
