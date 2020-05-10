@@ -65,6 +65,6 @@ public class Item {
      */
     @Override
     public String toString() {
-        return String.format("%s \t $%.2f %n", getName(), getPrice()); 
+        return String.format("   %s \t $%.2f %n", getName(), getPrice()); 
     }
 }

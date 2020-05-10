@@ -5,6 +5,7 @@
  */
 package pos;
 
+import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 
 /**
@@ -13,10 +14,13 @@ import javax.swing.JPanel;
  */
 public class Grocery extends javax.swing.JFrame {
 
+   
+
     /**
      * Creates new form Grocery
      */
     public Grocery() {
+        
         initComponents();
     }
 
@@ -123,13 +127,27 @@ public class Grocery extends javax.swing.JFrame {
         jButton20 = new javax.swing.JButton();
         managementPanel = new javax.swing.JPanel();
         menuPanel = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        inventoryButton = new javax.swing.JButton();
+        addItemButton = new javax.swing.JButton();
+        registerEmployeeButton = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jLayeredPane3 = new javax.swing.JLayeredPane();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        inventoryPanel = new javax.swing.JPanel();
+        addItemPanel = new javax.swing.JPanel();
+        registerEmployeePanel = new javax.swing.JPanel();
+        labelPanel = new javax.swing.JPanel();
+        firstLabel = new javax.swing.JLabel();
+        firstNameTextField = new javax.swing.JTextField();
+        last = new javax.swing.JLabel();
+        lastNameTextField = new javax.swing.JTextField();
+        pass = new javax.swing.JLabel();
+        passcodeTextField = new javax.swing.JTextField();
+        SSN = new javax.swing.JLabel();
+        ssnTextField = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        birthTextField = new javax.swing.JTextField();
+        jButton4 = new javax.swing.JButton();
+        discountPanel = new javax.swing.JPanel();
         loginPanel = new javax.swing.JPanel();
         loginArea = new javax.swing.JPanel();
         usernameLabel = new javax.swing.JLabel();
@@ -453,7 +471,7 @@ public class Grocery extends javax.swing.JFrame {
 
         unscannableItemsPanels.add(bulkPanel, "card2");
 
-        jPanelTotal.setLayout(new java.awt.GridLayout(2, 3, 5, 5));
+        jPanelTotal.setLayout(new java.awt.GridLayout(2, 3, 5, 0));
 
         jLabel4.setText("Sub-Total:");
         jPanelTotal.add(jLabel4);
@@ -472,23 +490,29 @@ public class Grocery extends javax.swing.JFrame {
         taxLabel.setForeground(new java.awt.Color(0, 153, 0));
         jPanelTotal.add(taxLabel);
 
-        totalLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        totalLabel.setForeground(new java.awt.Color(0, 153, 0));
+        totalLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        totalLabel.setForeground(new java.awt.Color(204, 51, 0));
         jPanelTotal.add(totalLabel);
 
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Monospaced", 0, 15)); // NOI18N
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
         lowerMenuPanel.setLayout(new java.awt.GridLayout(1, 0));
 
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bar.png"))); // NOI18N
         jButton8.setText("Scan");
         lowerMenuPanel.add(jButton8);
+
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/discount.png"))); // NOI18N
         lowerMenuPanel.add(jButton9);
 
-        jButton19.setText("Item Void");
+        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/void.png"))); // NOI18N
+        jButton19.setText("Void");
         lowerMenuPanel.add(jButton19);
 
+        jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pay.png"))); // NOI18N
         jButton20.setText("Pay");
         lowerMenuPanel.add(jButton20);
 
@@ -503,13 +527,9 @@ public class Grocery extends javax.swing.JFrame {
                     .addComponent(jPanelTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(46, 46, 46)
                 .addGroup(registerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(registerPanelLayout.createSequentialGroup()
-                        .addComponent(unscannableItemsPanels, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 178, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, registerPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(lowerMenuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(unscannableItemsPanels, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lowerMenuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 153, Short.MAX_VALUE)
                 .addComponent(unscannableItemsButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -520,62 +540,174 @@ public class Grocery extends javax.swing.JFrame {
                 .addGroup(registerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, registerPanelLayout.createSequentialGroup()
                         .addComponent(unscannableItemsButtons, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(60, Short.MAX_VALUE))
                     .addGroup(registerPanelLayout.createSequentialGroup()
                         .addGroup(registerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(unscannableItemsPanels, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(registerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanelTotal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, registerPanelLayout.createSequentialGroup()
-                                .addComponent(lowerMenuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())))))
+                                .addComponent(lowerMenuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(20, 20, 20))))))
         );
 
         mainPanels.add(registerPanel, "card2");
 
         menuPanel.setLayout(new java.awt.GridLayout(1, 0, 5, 5));
 
-        jButton1.setText("Inventory");
-        menuPanel.add(jButton1);
+        inventoryButton.setText("Inventory");
+        inventoryButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inventoryButtonActionPerformed(evt);
+            }
+        });
+        menuPanel.add(inventoryButton);
 
-        jButton2.setText("Add New Item");
-        menuPanel.add(jButton2);
+        addItemButton.setText("Add New Item");
+        addItemButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addItemButtonActionPerformed(evt);
+            }
+        });
+        menuPanel.add(addItemButton);
 
-        jButton3.setText("Register Employee");
-        menuPanel.add(jButton3);
+        registerEmployeeButton.setText("Register Employee");
+        registerEmployeeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerEmployeeButtonActionPerformed(evt);
+            }
+        });
+        menuPanel.add(registerEmployeeButton);
 
         jButton7.setText("Set Discount Rate");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
         menuPanel.add(jButton7);
 
         jLayeredPane3.setLayout(new java.awt.CardLayout());
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+        javax.swing.GroupLayout inventoryPanelLayout = new javax.swing.GroupLayout(inventoryPanel);
+        inventoryPanel.setLayout(inventoryPanelLayout);
+        inventoryPanelLayout.setHorizontalGroup(
+            inventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 908, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        jLayeredPane3.add(jPanel1, "card2");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+        inventoryPanelLayout.setVerticalGroup(
+            inventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 360, Short.MAX_VALUE)
         );
 
-        jLayeredPane3.add(jPanel2, "card3");
+        jLayeredPane3.add(inventoryPanel, "card2");
+
+        javax.swing.GroupLayout addItemPanelLayout = new javax.swing.GroupLayout(addItemPanel);
+        addItemPanel.setLayout(addItemPanelLayout);
+        addItemPanelLayout.setHorizontalGroup(
+            addItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 908, Short.MAX_VALUE)
+        );
+        addItemPanelLayout.setVerticalGroup(
+            addItemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 360, Short.MAX_VALUE)
+        );
+
+        jLayeredPane3.add(addItemPanel, "card3");
+
+        labelPanel.setLayout(new java.awt.GridLayout(0, 2));
+
+        firstLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        firstLabel.setText("First Name");
+        labelPanel.add(firstLabel);
+        labelPanel.add(firstNameTextField);
+
+        last.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        last.setText("Last Name");
+        labelPanel.add(last);
+
+        lastNameTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lastNameTextFieldActionPerformed(evt);
+            }
+        });
+        labelPanel.add(lastNameTextField);
+
+        pass.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        pass.setText("PassCode");
+        labelPanel.add(pass);
+
+        passcodeTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passcodeTextFieldActionPerformed(evt);
+            }
+        });
+        labelPanel.add(passcodeTextField);
+
+        SSN.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        SSN.setText("S.S.N.");
+        labelPanel.add(SSN);
+        labelPanel.add(ssnTextField);
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel8.setText("Date of Birth");
+        labelPanel.add(jLabel8);
+
+        birthTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                birthTextFieldActionPerformed(evt);
+            }
+        });
+        labelPanel.add(birthTextField);
+
+        jButton4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 153, 0));
+        jButton4.setText("Register");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout registerEmployeePanelLayout = new javax.swing.GroupLayout(registerEmployeePanel);
+        registerEmployeePanel.setLayout(registerEmployeePanelLayout);
+        registerEmployeePanelLayout.setHorizontalGroup(
+            registerEmployeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(registerEmployeePanelLayout.createSequentialGroup()
+                .addGap(191, 191, 191)
+                .addComponent(labelPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(101, 101, 101)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(177, Short.MAX_VALUE))
+        );
+        registerEmployeePanelLayout.setVerticalGroup(
+            registerEmployeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(registerEmployeePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(26, 26, 26))
+            .addGroup(registerEmployeePanelLayout.createSequentialGroup()
+                .addGap(148, 148, 148)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(157, Short.MAX_VALUE))
+        );
+
+        jLayeredPane3.add(registerEmployeePanel, "card2");
+
+        javax.swing.GroupLayout discountPanelLayout = new javax.swing.GroupLayout(discountPanel);
+        discountPanel.setLayout(discountPanelLayout);
+        discountPanelLayout.setHorizontalGroup(
+            discountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 908, Short.MAX_VALUE)
+        );
+        discountPanelLayout.setVerticalGroup(
+            discountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 360, Short.MAX_VALUE)
+        );
+
+        jLayeredPane3.add(discountPanel, "card2");
 
         javax.swing.GroupLayout managementPanelLayout = new javax.swing.GroupLayout(managementPanel);
         managementPanel.setLayout(managementPanelLayout);
@@ -583,10 +715,10 @@ public class Grocery extends javax.swing.JFrame {
             managementPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(managementPanelLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addGroup(managementPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLayeredPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 833, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addGroup(managementPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(menuPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLayeredPane3))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         managementPanelLayout.setVerticalGroup(
             managementPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -594,8 +726,8 @@ public class Grocery extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
-                .addComponent(jLayeredPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(306, Short.MAX_VALUE))
+                .addComponent(jLayeredPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         mainPanels.add(managementPanel, "card3");
@@ -635,14 +767,14 @@ public class Grocery extends javax.swing.JFrame {
             loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(loginPanelLayout.createSequentialGroup()
                 .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(loginMessageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 903, Short.MAX_VALUE)
+                    .addComponent(loginMessageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
                     .addGroup(loginPanelLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(logOutButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(loginPanelLayout.createSequentialGroup()
-                    .addComponent(loginArea, javax.swing.GroupLayout.DEFAULT_SIZE, 903, Short.MAX_VALUE)
+                    .addComponent(loginArea, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         loginPanelLayout.setVerticalGroup(
@@ -652,7 +784,7 @@ public class Grocery extends javax.swing.JFrame {
                 .addComponent(loginMessageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(logOutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(198, Short.MAX_VALUE))
+                .addContainerGap(203, Short.MAX_VALUE))
             .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(loginPanelLayout.createSequentialGroup()
                     .addContainerGap()
@@ -725,7 +857,7 @@ public class Grocery extends javax.swing.JFrame {
     }//GEN-LAST:event_logoActionPerformed
 
     private void fruitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fruitButtonActionPerformed
-        switchPanels(fruitPanel);
+        switchPanels(unscannableItemsPanels, fruitPanel);
     }//GEN-LAST:event_fruitButtonActionPerformed
 
     private void appleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_appleButtonActionPerformed
@@ -740,11 +872,11 @@ public class Grocery extends javax.swing.JFrame {
     }//GEN-LAST:event_cornButtonActionPerformed
 
     private void produceButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produceButtonActionPerformed
-        switchPanels(producePanel);
+        switchPanels(unscannableItemsPanels, producePanel);
     }//GEN-LAST:event_produceButtonActionPerformed
 
     private void deliButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deliButtonActionPerformed
-        switchPanels(deliPanel);
+        switchPanels(unscannableItemsPanels, deliPanel);
     }//GEN-LAST:event_deliButtonActionPerformed
 
     private void orangeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orangeButtonActionPerformed
@@ -753,12 +885,12 @@ public class Grocery extends javax.swing.JFrame {
 
     private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
         // TODO add your handling code here:
-        switchPanels2(registerPanel);
+        switchPanels(mainPanels, registerPanel);
     }//GEN-LAST:event_registerButtonActionPerformed
 
     private void managementButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_managementButtonActionPerformed
         // TODO add your handling code here:
-        switchPanels2(managementPanel);
+        switchPanels(mainPanels, managementPanel);
     }//GEN-LAST:event_managementButtonActionPerformed
 
     private void potatoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_potatoButtonActionPerformed
@@ -776,19 +908,19 @@ public class Grocery extends javax.swing.JFrame {
     }//GEN-LAST:event_wholePizzaButtonActionPerformed
 
     private void bakeryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bakeryButtonActionPerformed
-        switchPanels(bakeryPanel);
+        switchPanels(unscannableItemsPanels, bakeryPanel);
     }//GEN-LAST:event_bakeryButtonActionPerformed
 
     private void foodCourtButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_foodCourtButtonActionPerformed
-        switchPanels(foodCourtPanel);
+        switchPanels(unscannableItemsPanels, foodCourtPanel);
     }//GEN-LAST:event_foodCourtButtonActionPerformed
 
     private void bulkButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bulkButtonActionPerformed
-        switchPanels(bulkPanel);
+        switchPanels(unscannableItemsPanels, bulkPanel);
     }//GEN-LAST:event_bulkButtonActionPerformed
 
     private void logInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logInButtonActionPerformed
-        switchPanels2(loginPanel);
+        switchPanels(mainPanels, loginPanel);
     }//GEN-LAST:event_logInButtonActionPerformed
 
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
@@ -798,6 +930,50 @@ public class Grocery extends javax.swing.JFrame {
     private void logOutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logOutButtonActionPerformed
         loginMessageLabel.setText("Successfully logged out.");
     }//GEN-LAST:event_logOutButtonActionPerformed
+
+    private void lastNameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lastNameTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lastNameTextFieldActionPerformed
+
+    private void passcodeTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passcodeTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passcodeTextFieldActionPerformed
+
+    private void birthTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_birthTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_birthTextFieldActionPerformed
+
+    private void inventoryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inventoryButtonActionPerformed
+        // TODO add your handling code here:
+        switchPanels(jLayeredPane3, inventoryPanel);
+    }//GEN-LAST:event_inventoryButtonActionPerformed
+
+    private void addItemButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addItemButtonActionPerformed
+        // TODO add your handling code here:
+        switchPanels(jLayeredPane3, addItemPanel);
+    }//GEN-LAST:event_addItemButtonActionPerformed
+
+    private void registerEmployeeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerEmployeeButtonActionPerformed
+        // TODO add your handling code here:
+        switchPanels(jLayeredPane3, registerEmployeePanel);
+    }//GEN-LAST:event_registerEmployeeButtonActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        switchPanels(jLayeredPane3, discountPanel);
+    }//GEN-LAST:event_jButton7ActionPerformed
+     
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        
+        employeeList[employeeNum] = new NewEmployee(firstNameTextField.getText(),lastNameTextField.getText(),
+        passcodeTextField.getText(), ssnTextField.getText());
+        employeeNum++;
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
+    
+    NewEmployee employeeList[] = new NewEmployee[99];
+    int employeeNum= 0;
     
     double subtotal=0;
     double tax=0;
@@ -808,25 +984,21 @@ public class Grocery extends javax.swing.JFrame {
     Item corn = new Item("Corn","0004", 0.50, 100);
     //Item i = new Item("i","0005", 0.50, 100);
     //Item i = new Item("i","0006", 0.50, 100);
-    //Item i = new Item("i","0007", 0.50, 100);
+    //Item i = new Item("i","0007", 0.50, 100); 
     //Item i = new Item("i","0008", 0.50, 100);
     //Item i = new Item("i","0009", 0.50, 100);
     /**
      * @param args the command line arguments
      */
-    public void switchPanels(JPanel panel)
+    
+    
+    public void switchPanels(JLayeredPane pane, JPanel panel)
     {
-        unscannableItemsPanels.removeAll();
-        unscannableItemsPanels.add(panel);
-        unscannableItemsPanels.repaint();
-        unscannableItemsPanels.revalidate();
-    }
-    public void switchPanels2(JPanel panel)
-    {
-        mainPanels.removeAll();
-        mainPanels.add(panel);
-        mainPanels.repaint();
-        mainPanels.revalidate();
+        pane.removeAll();
+        pane.add(panel);
+        pane.repaint();
+        pane.revalidate();
+        
     }
     public void updateTotal(double price)
     {
@@ -872,6 +1044,9 @@ public class Grocery extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel FrameMenuPanel;
+    private javax.swing.JLabel SSN;
+    private javax.swing.JButton addItemButton;
+    private javax.swing.JPanel addItemPanel;
     private javax.swing.JButton almondsButton;
     private javax.swing.JButton appleButton;
     private javax.swing.JButton bagelButton;
@@ -879,6 +1054,7 @@ public class Grocery extends javax.swing.JFrame {
     private javax.swing.JButton bakeryButton;
     private javax.swing.JPanel bakeryPanel;
     private javax.swing.JButton bananaButton;
+    private javax.swing.JTextField birthTextField;
     private javax.swing.JButton bolognaButton;
     private javax.swing.JButton broccoliButton;
     private javax.swing.JButton bulkButton;
@@ -895,8 +1071,11 @@ public class Grocery extends javax.swing.JFrame {
     private javax.swing.JButton cucumberButton;
     private javax.swing.JButton deliButton;
     private javax.swing.JPanel deliPanel;
+    private javax.swing.JPanel discountPanel;
     private javax.swing.JButton driedFruitButton;
     private javax.swing.JLabel fillerLabel;
+    private javax.swing.JLabel firstLabel;
+    private javax.swing.JTextField firstNameTextField;
     private javax.swing.JButton flourButton;
     private javax.swing.JButton foodCourtButton;
     private javax.swing.JPanel foodCourtPanel;
@@ -910,25 +1089,27 @@ public class Grocery extends javax.swing.JFrame {
     private javax.swing.JButton hamButton;
     private javax.swing.JButton hotDogButton;
     private javax.swing.JButton iceCreamButton;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton inventoryButton;
+    private javax.swing.JPanel inventoryPanel;
     private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLayeredPane jLayeredPane3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanelTotal;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton kiwiButton;
+    private javax.swing.JPanel labelPanel;
     private javax.swing.JButton largeDrinkButton;
+    private javax.swing.JLabel last;
+    private javax.swing.JTextField lastNameTextField;
     private javax.swing.JButton lettuceButton;
     private javax.swing.JButton logInButton;
     private javax.swing.JButton logOutButton;
@@ -947,6 +1128,8 @@ public class Grocery extends javax.swing.JFrame {
     private javax.swing.JButton oatsButton;
     private javax.swing.JButton onionButton;
     private javax.swing.JButton orangeButton;
+    private javax.swing.JLabel pass;
+    private javax.swing.JTextField passcodeTextField;
     private javax.swing.JPasswordField passwordField;
     private javax.swing.JLabel passwordLabel;
     private javax.swing.JButton peanutsButton;
@@ -957,6 +1140,8 @@ public class Grocery extends javax.swing.JFrame {
     private javax.swing.JButton produceButton;
     private javax.swing.JPanel producePanel;
     private javax.swing.JButton registerButton;
+    private javax.swing.JButton registerEmployeeButton;
+    private javax.swing.JPanel registerEmployeePanel;
     private javax.swing.JPanel registerPanel;
     private javax.swing.JButton roastBeefButton;
     private javax.swing.JButton rollsButton;
@@ -968,6 +1153,7 @@ public class Grocery extends javax.swing.JFrame {
     private javax.swing.JButton soupButton;
     private javax.swing.JButton sourdoughLoafButton;
     private javax.swing.JButton spinachButton;
+    private javax.swing.JTextField ssnTextField;
     private javax.swing.JButton strawberriesButton;
     private javax.swing.JLabel subTotalLabel;
     private javax.swing.JButton submitButton;
