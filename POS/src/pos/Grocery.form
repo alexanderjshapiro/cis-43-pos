@@ -54,7 +54,7 @@
                   <Component id="logo" alignment="1" min="-2" pref="104" max="-2" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="userInfoLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                       <Component id="FrameMenuPanel" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -858,7 +858,7 @@
                               <Component id="jPanel1" min="-2" pref="49" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                               <Component id="jLayeredPaneInventory" min="-2" pref="215" max="-2" attributes="0"/>
-                              <EmptySpace pref="54" max="32767" attributes="0"/>
+                              <EmptySpace pref="48" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1160,10 +1160,7 @@
                                     <Property name="text" type="java.lang.String" value="Product Name"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField2">
-                                  <Properties>
-                                    <Property name="text" type="java.lang.String" value="jTextField2"/>
-                                  </Properties>
+                                <Component class="javax.swing.JTextField" name="productNameTextField">
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabel10">
                                   <Properties>
@@ -1192,30 +1189,21 @@
                                     <Property name="text" type="java.lang.String" value="Quantity"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField9">
-                                  <Properties>
-                                    <Property name="text" type="java.lang.String" value="jTextField2"/>
-                                  </Properties>
+                                <Component class="javax.swing.JTextField" name="quantityTextField">
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabel3">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="SKU"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField8">
-                                  <Properties>
-                                    <Property name="text" type="java.lang.String" value="jTextField2"/>
-                                  </Properties>
+                                <Component class="javax.swing.JTextField" name="idTextField">
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabel9">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="Price"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField7">
-                                  <Properties>
-                                    <Property name="text" type="java.lang.String" value="jTextField2"/>
-                                  </Properties>
+                                <Component class="javax.swing.JTextField" name="priceTextField">
                                 </Component>
                               </SubComponents>
                             </Container>

@@ -159,15 +159,15 @@ public class Grocery extends javax.swing.JFrame {
         addProductPanel = new javax.swing.JPanel();
         addNewProductPanel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        productNameTextField = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
+        quantityTextField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        idTextField = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        priceTextField = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         printInventoryPanel = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -772,9 +772,7 @@ public class Grocery extends javax.swing.JFrame {
 
         jLabel2.setText("Product Name");
         addNewProductPanel.add(jLabel2);
-
-        jTextField2.setText("jTextField2");
-        addNewProductPanel.add(jTextField2);
+        addNewProductPanel.add(productNameTextField);
 
         jLabel10.setText("Category");
         addNewProductPanel.add(jLabel10);
@@ -784,21 +782,15 @@ public class Grocery extends javax.swing.JFrame {
 
         jLabel7.setText("Quantity");
         addNewProductPanel.add(jLabel7);
-
-        jTextField9.setText("jTextField2");
-        addNewProductPanel.add(jTextField9);
+        addNewProductPanel.add(quantityTextField);
 
         jLabel3.setText("SKU");
         addNewProductPanel.add(jLabel3);
-
-        jTextField8.setText("jTextField2");
-        addNewProductPanel.add(jTextField8);
+        addNewProductPanel.add(idTextField);
 
         jLabel9.setText("Price");
         addNewProductPanel.add(jLabel9);
-
-        jTextField7.setText("jTextField2");
-        addNewProductPanel.add(jTextField7);
+        addNewProductPanel.add(priceTextField);
 
         jButton2.setText("add new Item");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -886,7 +878,7 @@ public class Grocery extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
                 .addComponent(jLayeredPaneInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         jLayeredPane3.add(inventoryPanel, "card2");
@@ -1129,7 +1121,7 @@ public class Grocery extends javax.swing.JFrame {
                     .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(userInfoLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(22, 22, 22)
                         .addComponent(FrameMenuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(7, 7, 7)
                 .addComponent(mainPanels, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1150,6 +1142,7 @@ public class Grocery extends javax.swing.JFrame {
     private void appleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_appleButtonActionPerformed
         jTextArea1.append(apple.toString());
         updateTotal(apple.getPrice());
+        inventory.decreaseQuantity("Apple");
     }//GEN-LAST:event_appleButtonActionPerformed
 
     private void cornButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cornButtonActionPerformed
@@ -1283,7 +1276,9 @@ public class Grocery extends javax.swing.JFrame {
     }//GEN-LAST:event_addNewProductButtonActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        inventory.createItem(" apple ","sdas");
+        inventory.createItem(productNameTextField.getText(),idTextField.getText()
+                ,Double.parseDouble(priceTextField.getText()),
+                Integer.parseInt(quantityTextField.getText()));
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -1300,6 +1295,7 @@ public class Grocery extends javax.swing.JFrame {
     double subtotal=0;
     double tax=0;
     double total=0;
+    
     Item potato = new Item("Potato","0001", 0.99,25);
     Item lettuce = new Item("Lettuce", "0002", 1.05, 39);
     Item apple = new Item("Apple","0003", 0.50, 100);
@@ -1413,6 +1409,7 @@ public class Grocery extends javax.swing.JFrame {
     private javax.swing.JButton hamButton;
     private javax.swing.JButton hotDogButton;
     private javax.swing.JButton iceCreamButton;
+    private javax.swing.JTextField idTextField;
     private javax.swing.JButton inventoryButton;
     private javax.swing.JPanel inventoryPanel;
     private javax.swing.JTextArea inventoryTextArea;
@@ -1455,14 +1452,10 @@ public class Grocery extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JButton kiwiButton;
     private javax.swing.JPanel labelPanel;
     private javax.swing.JButton largeDrinkButton;
@@ -1496,9 +1489,12 @@ public class Grocery extends javax.swing.JFrame {
     private javax.swing.JButton pineappleButton;
     private javax.swing.JButton pizzaSliceButton;
     private javax.swing.JButton potatoButton;
+    private javax.swing.JTextField priceTextField;
     private javax.swing.JPanel printInventoryPanel;
     private javax.swing.JButton produceButton;
     private javax.swing.JPanel producePanel;
+    private javax.swing.JTextField productNameTextField;
+    private javax.swing.JTextField quantityTextField;
     private javax.swing.JButton registerButton;
     private javax.swing.JButton registerEmployeeButton;
     private javax.swing.JPanel registerEmployeePanel;

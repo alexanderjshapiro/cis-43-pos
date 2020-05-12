@@ -5,8 +5,8 @@ public class Inventory {
     private ArrayList<Item> items = new ArrayList<Item>();
 
     public Inventory() {
-        this.items.add(new Item("Apple", "4877326352"));
-        this.items.add(new Item("Tomato", "21366363636"));
+        this.items.add(new Item("Apple", "4877326352", 0.55, 100));
+        this.items.add(new Item("Tomato", "21366363636",0.5,50));
     }
     
     
@@ -35,7 +35,12 @@ public class Inventory {
     public void createItem(String name, String itemId) {
         this.items.add(new Item(name,  itemId));
     }
-
+     public void createItem(String name, String itemId, double price) {
+        this.items.add(new Item(name,  itemId, price));
+    } 
+    public void createItem(String name, String itemId, double price, int quantity) {
+        this.items.add(new Item(name,  itemId, price, quantity));
+    }
     public String toString() {
         String s="";
         s+="Inventory contains:\n";
