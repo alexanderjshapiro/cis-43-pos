@@ -7,6 +7,7 @@ package pos;
 
 import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -128,14 +129,13 @@ public class Grocery extends javax.swing.JFrame {
         managementPanel = new javax.swing.JPanel();
         menuPanel = new javax.swing.JPanel();
         inventoryButton = new javax.swing.JButton();
-        addItemButton = new javax.swing.JButton();
         registerEmployeeButton = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jLayeredPane3 = new javax.swing.JLayeredPane();
         inventoryPanel = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        addNewProductButton = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jLayeredPaneInventory = new javax.swing.JLayeredPane();
@@ -156,8 +156,8 @@ public class Grocery extends javax.swing.JFrame {
         jButton14 = new javax.swing.JButton();
         jTextField6 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        addProductPanel = new javax.swing.JPanel();
         addNewProductPanel = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
@@ -168,7 +168,11 @@ public class Grocery extends javax.swing.JFrame {
         jTextField8 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
-        jButton15 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        printInventoryPanel = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        inventoryTextArea = new javax.swing.JTextArea();
+        jButton5 = new javax.swing.JButton();
         registerEmployeePanel = new javax.swing.JPanel();
         labelPanel = new javax.swing.JPanel();
         firstLabel = new javax.swing.JLabel();
@@ -601,14 +605,6 @@ public class Grocery extends javax.swing.JFrame {
         });
         menuPanel.add(inventoryButton);
 
-        addItemButton.setText("Add New Product");
-        addItemButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addItemButtonActionPerformed(evt);
-            }
-        });
-        menuPanel.add(addItemButton);
-
         registerEmployeeButton.setText("Register Employee");
         registerEmployeeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -639,10 +635,15 @@ public class Grocery extends javax.swing.JFrame {
         });
         jPanel1.add(jButton3);
 
-        jButton5.setBackground(new java.awt.Color(255, 153, 0));
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Reorder");
-        jPanel1.add(jButton5);
+        addNewProductButton.setBackground(new java.awt.Color(255, 153, 0));
+        addNewProductButton.setForeground(new java.awt.Color(255, 255, 255));
+        addNewProductButton.setText("Add New Product");
+        addNewProductButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addNewProductButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(addNewProductButton);
 
         jButton6.setBackground(new java.awt.Color(255, 153, 0));
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
@@ -657,6 +658,11 @@ public class Grocery extends javax.swing.JFrame {
         jButton10.setBackground(new java.awt.Color(255, 153, 0));
         jButton10.setForeground(new java.awt.Color(255, 255, 255));
         jButton10.setText("Print Inventory");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton10);
 
         jLayeredPaneInventory.setLayout(new java.awt.CardLayout());
@@ -762,6 +768,106 @@ public class Grocery extends javax.swing.JFrame {
 
         jLayeredPaneInventory.add(fixQuantityPanel, "card3");
 
+        addNewProductPanel.setLayout(new java.awt.GridLayout(5, 2, 0, 15));
+
+        jLabel2.setText("Product Name");
+        addNewProductPanel.add(jLabel2);
+
+        jTextField2.setText("jTextField2");
+        addNewProductPanel.add(jTextField2);
+
+        jLabel10.setText("Category");
+        addNewProductPanel.add(jLabel10);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Produce", "Fruit", "Deli", "Bakery", "Food Court", "Bulk" }));
+        addNewProductPanel.add(jComboBox1);
+
+        jLabel7.setText("Quantity");
+        addNewProductPanel.add(jLabel7);
+
+        jTextField9.setText("jTextField2");
+        addNewProductPanel.add(jTextField9);
+
+        jLabel3.setText("SKU");
+        addNewProductPanel.add(jLabel3);
+
+        jTextField8.setText("jTextField2");
+        addNewProductPanel.add(jTextField8);
+
+        jLabel9.setText("Price");
+        addNewProductPanel.add(jLabel9);
+
+        jTextField7.setText("jTextField2");
+        addNewProductPanel.add(jTextField7);
+
+        jButton2.setText("add new Item");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout addProductPanelLayout = new javax.swing.GroupLayout(addProductPanel);
+        addProductPanel.setLayout(addProductPanelLayout);
+        addProductPanelLayout.setHorizontalGroup(
+            addProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addProductPanelLayout.createSequentialGroup()
+                .addContainerGap(417, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(86, 86, 86))
+            .addGroup(addProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addProductPanelLayout.createSequentialGroup()
+                    .addContainerGap(17, Short.MAX_VALUE)
+                    .addComponent(addNewProductPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(267, Short.MAX_VALUE)))
+        );
+        addProductPanelLayout.setVerticalGroup(
+            addProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addProductPanelLayout.createSequentialGroup()
+                .addContainerGap(96, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(90, 90, 90))
+            .addGroup(addProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addProductPanelLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(addNewProductPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+
+        jLayeredPaneInventory.add(addProductPanel, "card5");
+
+        inventoryTextArea.setColumns(20);
+        inventoryTextArea.setRows(5);
+        jScrollPane3.setViewportView(inventoryTextArea);
+
+        jButton5.setText("Print");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout printInventoryPanelLayout = new javax.swing.GroupLayout(printInventoryPanel);
+        printInventoryPanel.setLayout(printInventoryPanelLayout);
+        printInventoryPanelLayout.setHorizontalGroup(
+            printInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, printInventoryPanelLayout.createSequentialGroup()
+                .addGap(122, 122, 122)
+                .addComponent(jButton5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(141, 141, 141))
+        );
+        printInventoryPanelLayout.setVerticalGroup(
+            printInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane3)
+            .addGroup(printInventoryPanelLayout.createSequentialGroup()
+                .addGap(84, 84, 84)
+                .addComponent(jButton5)
+                .addContainerGap(102, Short.MAX_VALUE))
+        );
+
+        jLayeredPaneInventory.add(printInventoryPanel, "card5");
+
         javax.swing.GroupLayout inventoryPanelLayout = new javax.swing.GroupLayout(inventoryPanel);
         inventoryPanel.setLayout(inventoryPanelLayout);
         inventoryPanelLayout.setHorizontalGroup(
@@ -784,66 +890,6 @@ public class Grocery extends javax.swing.JFrame {
         );
 
         jLayeredPane3.add(inventoryPanel, "card2");
-
-        jPanel4.setLayout(new java.awt.GridLayout(5, 2, 0, 15));
-
-        jLabel2.setText("Product Name");
-        jPanel4.add(jLabel2);
-
-        jTextField2.setText("jTextField2");
-        jPanel4.add(jTextField2);
-
-        jLabel10.setText("Category");
-        jPanel4.add(jLabel10);
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Produce", "Fruit", "Deli", "Bakery", "Food Court", "Bulk" }));
-        jPanel4.add(jComboBox1);
-
-        jLabel7.setText("Quantity");
-        jPanel4.add(jLabel7);
-
-        jTextField9.setText("jTextField2");
-        jPanel4.add(jTextField9);
-
-        jLabel3.setText("SKU");
-        jPanel4.add(jLabel3);
-
-        jTextField8.setText("jTextField2");
-        jPanel4.add(jTextField8);
-
-        jLabel9.setText("Price");
-        jPanel4.add(jLabel9);
-
-        jTextField7.setText("jTextField2");
-        jPanel4.add(jTextField7);
-
-        jButton15.setText("Add New Product");
-
-        javax.swing.GroupLayout addNewProductPanelLayout = new javax.swing.GroupLayout(addNewProductPanel);
-        addNewProductPanel.setLayout(addNewProductPanelLayout);
-        addNewProductPanelLayout.setHorizontalGroup(
-            addNewProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(addNewProductPanelLayout.createSequentialGroup()
-                .addGap(134, 134, 134)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(122, 122, 122)
-                .addComponent(jButton15)
-                .addContainerGap(116, Short.MAX_VALUE))
-        );
-        addNewProductPanelLayout.setVerticalGroup(
-            addNewProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(addNewProductPanelLayout.createSequentialGroup()
-                .addGroup(addNewProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(addNewProductPanelLayout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(addNewProductPanelLayout.createSequentialGroup()
-                        .addGap(152, 152, 152)
-                        .addComponent(jButton15)))
-                .addContainerGap(68, Short.MAX_VALUE))
-        );
-
-        jLayeredPane3.add(addNewProductPanel, "card3");
 
         labelPanel.setLayout(new java.awt.GridLayout(0, 2));
 
@@ -908,7 +954,7 @@ public class Grocery extends javax.swing.JFrame {
                 .addComponent(labelPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(101, 101, 101)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(177, Short.MAX_VALUE))
+                .addContainerGap(201, Short.MAX_VALUE))
         );
         registerEmployeePanelLayout.setVerticalGroup(
             registerEmployeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -928,7 +974,7 @@ public class Grocery extends javax.swing.JFrame {
         discountPanel.setLayout(discountPanelLayout);
         discountPanelLayout.setHorizontalGroup(
             discountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 908, Short.MAX_VALUE)
+            .addGap(0, 932, Short.MAX_VALUE)
         );
         discountPanelLayout.setVerticalGroup(
             discountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1192,11 +1238,6 @@ public class Grocery extends javax.swing.JFrame {
         switchPanels(jLayeredPane3, inventoryPanel);
     }//GEN-LAST:event_inventoryButtonActionPerformed
 
-    private void addItemButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addItemButtonActionPerformed
-        // TODO add your handling code here:
-        switchPanels(jLayeredPane3, addNewProductPanel);
-    }//GEN-LAST:event_addItemButtonActionPerformed
-
     private void registerEmployeeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerEmployeeButtonActionPerformed
         // TODO add your handling code here:
         switchPanels(jLayeredPane3, registerEmployeePanel);
@@ -1236,7 +1277,23 @@ public class Grocery extends javax.swing.JFrame {
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField6ActionPerformed
-    
+
+    private void addNewProductButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNewProductButtonActionPerformed
+        switchPanels(jLayeredPaneInventory, addProductPanel);
+    }//GEN-LAST:event_addNewProductButtonActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        inventory.createItem(" apple ","sdas");
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        inventoryTextArea.setText(inventory.toString());
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        switchPanels(jLayeredPaneInventory, printInventoryPanel);
+    }//GEN-LAST:event_jButton10ActionPerformed
+    Inventory inventory= new Inventory();
     NewEmployee employeeList[] = new NewEmployee[99];
     int employeeNum= 0;
     
@@ -1310,8 +1367,9 @@ public class Grocery extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel FrameMenuPanel;
     private javax.swing.JLabel SSN;
-    private javax.swing.JButton addItemButton;
+    private javax.swing.JButton addNewProductButton;
     private javax.swing.JPanel addNewProductPanel;
+    private javax.swing.JPanel addProductPanel;
     private javax.swing.JButton almondsButton;
     private javax.swing.JButton appleButton;
     private javax.swing.JButton bagelButton;
@@ -1357,14 +1415,15 @@ public class Grocery extends javax.swing.JFrame {
     private javax.swing.JButton iceCreamButton;
     private javax.swing.JButton inventoryButton;
     private javax.swing.JPanel inventoryPanel;
+    private javax.swing.JTextArea inventoryTextArea;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton19;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1389,10 +1448,10 @@ public class Grocery extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanelTotal;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
@@ -1437,6 +1496,7 @@ public class Grocery extends javax.swing.JFrame {
     private javax.swing.JButton pineappleButton;
     private javax.swing.JButton pizzaSliceButton;
     private javax.swing.JButton potatoButton;
+    private javax.swing.JPanel printInventoryPanel;
     private javax.swing.JButton produceButton;
     private javax.swing.JPanel producePanel;
     private javax.swing.JButton registerButton;

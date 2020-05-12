@@ -1,7 +1,6 @@
 
 
 package pos;
-
 import static java.lang.String.format;
 
 
@@ -12,11 +11,11 @@ public class Item {
     private int quantity;
     private double price;
     
-    public Item(String name,  double price) {
+    public Item(String name, String itemId) {
         this.name=name;
-        this.itemId="0000";
-        this.price=price;
-        this.quantity=0;
+        this.itemId=itemId;
+      
+       
     }
     public Item(String name, String itemId, double price) {
         this.name=name;
