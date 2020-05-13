@@ -3,7 +3,7 @@ package pos;
 import javax.swing.JFrame;
 
 /**
- * Runner for Dashboard
+ * Runner for Dashboard.java
  *
  * @author Alexander Shapiro, Edwin Mejia
  * @version 0.1
