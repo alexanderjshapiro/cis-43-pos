@@ -113,10 +113,12 @@ public class Grocery extends javax.swing.JFrame {
         driedFruitButton = new javax.swing.JButton();
         candyButton = new javax.swing.JButton();
         jPanelTotal = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        subTotalLabel = new javax.swing.JLabel();
+        taxLabel = new javax.swing.JLabel();
         totalLabel = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         lowerMenuPanel = new javax.swing.JPanel();
@@ -509,43 +511,28 @@ public class Grocery extends javax.swing.JFrame {
 
         unscannableItemsPanels.add(bulkPanel, "card2");
 
-        jLabel5.setText("Tax:");
-
-        jLabel6.setText("TOTAL:");
-
-        totalLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        totalLabel.setForeground(new java.awt.Color(204, 51, 0));
+        jPanelTotal.setLayout(new java.awt.GridLayout(2, 0));
 
         jLabel4.setText("Sub-Total:");
+        jPanelTotal.add(jLabel4);
 
-        javax.swing.GroupLayout jPanelTotalLayout = new javax.swing.GroupLayout(jPanelTotal);
-        jPanelTotal.setLayout(jPanelTotalLayout);
-        jPanelTotalLayout.setHorizontalGroup(
-            jPanelTotalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelTotalLayout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(jLabel4)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel5)
-                .addGap(7, 7, 7)
-                .addComponent(jLabel6)
-                .addContainerGap(73, Short.MAX_VALUE))
-            .addGroup(jPanelTotalLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(totalLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanelTotalLayout.setVerticalGroup(
-            jPanelTotalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelTotalLayout.createSequentialGroup()
-                .addGap(5, 5, 5)
-                .addGroup(jPanelTotalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel4))
-                .addGap(4, 4, 4)
-                .addComponent(totalLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel5.setText("Tax:");
+        jPanelTotal.add(jLabel5);
+
+        jLabel6.setText("TOTAL:");
+        jPanelTotal.add(jLabel6);
+
+        subTotalLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        subTotalLabel.setForeground(new java.awt.Color(0, 153, 51));
+        jPanelTotal.add(subTotalLabel);
+
+        taxLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        taxLabel.setForeground(new java.awt.Color(0, 153, 51));
+        jPanelTotal.add(taxLabel);
+
+        totalLabel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        totalLabel.setForeground(new java.awt.Color(0, 102, 51));
+        jPanelTotal.add(totalLabel);
 
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Monospaced", 0, 15)); // NOI18N
@@ -577,14 +564,12 @@ public class Grocery extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(registerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(registerPanelLayout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jPanelTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(46, 46, 46)
+                    .addComponent(jPanelTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(80, 80, 80)
                 .addGroup(registerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(unscannableItemsPanels, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lowerMenuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 171, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addComponent(unscannableItemsButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -600,12 +585,12 @@ public class Grocery extends javax.swing.JFrame {
                         .addGroup(registerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(unscannableItemsPanels, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
                         .addGroup(registerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lowerMenuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(registerPanelLayout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(jPanelTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 16, Short.MAX_VALUE)
+                                .addComponent(lowerMenuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jPanelTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(20, 20, 20))))
         );
 
@@ -859,19 +844,19 @@ public class Grocery extends javax.swing.JFrame {
         printInventoryPanelLayout.setHorizontalGroup(
             printInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, printInventoryPanelLayout.createSequentialGroup()
-                .addGap(122, 122, 122)
+                .addContainerGap(131, Short.MAX_VALUE)
                 .addComponent(jButton5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(141, 141, 141))
+                .addGap(112, 112, 112)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(170, 170, 170))
         );
         printInventoryPanelLayout.setVerticalGroup(
             printInventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane3)
-            .addGroup(printInventoryPanelLayout.createSequentialGroup()
-                .addGap(84, 84, 84)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, printInventoryPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton5)
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addGap(87, 87, 87))
         );
 
         jLayeredPaneInventory.add(printInventoryPanel, "card5");
@@ -1156,7 +1141,7 @@ public class Grocery extends javax.swing.JFrame {
 
     private void appleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_appleButtonActionPerformed
         jTextArea1.append(apple.toString());
-        //totalLabel.setText(Sale.toString(apple.getPrice()));
+        //totalLabel.setText(Sale.getSubTotal());
         updateTotal(apple.getPrice());
         inventory.decreaseQuantity("Apple");
     }//GEN-LAST:event_appleButtonActionPerformed
@@ -1329,11 +1314,11 @@ public class Grocery extends javax.swing.JFrame {
     
     public void updateTotal(double price)
     {
-        this.subtotal = this.subtotal + price;
-        this.tax = this.subtotal *0.0925;
-        this.total = this.subtotal + this.tax;
-        //subTotalLabel.setText(String.format("%.2f", subtotal));
-        //taxLabel.setText(String.format("%.2f",tax));
+        subtotal = subtotal + price;
+        tax = subtotal *0.0925;
+        total = subtotal + tax;
+        subTotalLabel.setText(String.format("%.2f", subtotal));
+        taxLabel.setText(String.format("%.2f",tax));
         totalLabel.setText(String.format("%.2f",total));
     }
     public void switchPanels(JLayeredPane pane, JPanel panel)
@@ -1529,9 +1514,11 @@ public class Grocery extends javax.swing.JFrame {
     private javax.swing.JButton spinachButton;
     private javax.swing.JTextField ssnTextField;
     private javax.swing.JButton strawberriesButton;
+    private javax.swing.JLabel subTotalLabel;
     private javax.swing.JButton submitButton;
     private javax.swing.JButton sugarButton;
     private javax.swing.JButton swissButton;
+    private javax.swing.JLabel taxLabel;
     private javax.swing.JLabel totalLabel;
     private javax.swing.JButton trailMixButton;
     private javax.swing.JButton turkeyButton;

@@ -13,8 +13,14 @@ public class Sale {
     double subtotal=0;
     double tax=0;
     double total=0;
+    double price;
     
-    public void updateTotal(double price)
+    public Sale(double price)
+    {
+        this.price=price;
+    }
+    
+    public void updateTotal()
     {
         this.subtotal = this.subtotal + price;
         this.tax = this.subtotal *0.0925;
@@ -28,9 +34,10 @@ public class Sale {
         return subtotal;
     }
     
+    @Override
     public String toString()
     {
-        return String.format("%.2f \tdfdfd %.2f \t %.2f", getSubTotal());
+        return String.format("%.2f", getSubTotal());
     }
                    
     
