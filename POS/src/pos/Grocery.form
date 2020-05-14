@@ -96,10 +96,15 @@
                           <Component id="jScrollPane1" min="-2" pref="277" max="-2" attributes="0"/>
                           <Component id="jPanelTotal" min="-2" pref="290" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="unscannableItemsPanels" min="-2" pref="362" max="-2" attributes="0"/>
-                          <Component id="lowerMenuPanel" min="-2" pref="387" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="unscannableItemsPanels" min="-2" pref="362" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="lowerMenuPanel" min="-2" pref="422" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace pref="33" max="32767" attributes="0"/>
                       <Component id="unscannableItemsButtons" min="-2" max="-2" attributes="0"/>
@@ -114,7 +119,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="unscannableItemsButtons" min="-2" pref="466" max="-2" attributes="0"/>
-                              <EmptySpace pref="60" max="32767" attributes="0"/>
+                              <EmptySpace pref="55" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
@@ -263,6 +268,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Garlic"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="garlicButtonActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="broccoliButton">
                       <Properties>
@@ -769,11 +777,16 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLayeredPane3" min="-2" max="-2" attributes="0"/>
-                          <Component id="menuPanel" min="-2" pref="890" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                              <Component id="jLayeredPane3" min="-2" pref="914" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
+                              <Component id="menuPanel" min="-2" pref="762" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -786,7 +799,7 @@
                       <Component id="menuPanel" min="-2" pref="76" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                       <Component id="jLayeredPane3" min="-2" pref="360" max="-2" attributes="0"/>
-                      <EmptySpace pref="51" max="32767" attributes="0"/>
+                      <EmptySpace pref="46" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -847,7 +860,7 @@
                                   <Component id="jLayeredPaneInventory" min="-2" pref="634" max="-2" attributes="0"/>
                                   <Component id="jPanel1" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="237" max="32767" attributes="0"/>
+                              <EmptySpace pref="243" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1292,7 +1305,7 @@
                               <Component id="labelPanel" min="-2" pref="293" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
                               <Component id="jButton4" min="-2" pref="146" max="-2" attributes="0"/>
-                              <EmptySpace pref="201" max="32767" attributes="0"/>
+                              <EmptySpace pref="183" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1406,7 +1419,7 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="932" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="914" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">

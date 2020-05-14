@@ -27,7 +27,7 @@ public class Sale {
         this.total = this.subtotal + this.tax;
         //subTotalLabel.setText(String.format("%.2f", subtotal));
         //taxLabel.setText(String.format("%.2f",tax));
-        //totalLabel.setText(String.format("%.2f",total));
+        //totalLabel.setText(String.format("%.2f",total));SaleSe eeeeee
     }
     public double getSubTotal()
     {

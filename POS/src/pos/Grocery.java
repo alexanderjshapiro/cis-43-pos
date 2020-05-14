@@ -296,6 +296,11 @@ public class Grocery extends javax.swing.JFrame {
         producePanel.add(potatoButton);
 
         garlicButton.setText("Garlic");
+        garlicButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                garlicButtonActionPerformed(evt);
+            }
+        });
         producePanel.add(garlicButton);
 
         broccoliButton.setText("Broccoli");
@@ -565,10 +570,13 @@ public class Grocery extends javax.swing.JFrame {
                 .addGroup(registerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanelTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(80, 80, 80)
                 .addGroup(registerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(unscannableItemsPanels, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lowerMenuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(registerPanelLayout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(unscannableItemsPanels, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(registerPanelLayout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(lowerMenuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addComponent(unscannableItemsButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -580,7 +588,7 @@ public class Grocery extends javax.swing.JFrame {
                 .addGroup(registerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, registerPanelLayout.createSequentialGroup()
                         .addComponent(unscannableItemsButtons, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(60, Short.MAX_VALUE))
+                        .addContainerGap(55, Short.MAX_VALUE))
                     .addGroup(registerPanelLayout.createSequentialGroup()
                         .addGroup(registerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -870,7 +878,7 @@ public class Grocery extends javax.swing.JFrame {
                 .addGroup(inventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLayeredPaneInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 634, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(237, Short.MAX_VALUE))
+                .addContainerGap(243, Short.MAX_VALUE))
         );
         inventoryPanelLayout.setVerticalGroup(
             inventoryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -947,7 +955,7 @@ public class Grocery extends javax.swing.JFrame {
                 .addComponent(labelPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(101, 101, 101)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(201, Short.MAX_VALUE))
+                .addContainerGap(183, Short.MAX_VALUE))
         );
         registerEmployeePanelLayout.setVerticalGroup(
             registerEmployeePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -967,7 +975,7 @@ public class Grocery extends javax.swing.JFrame {
         discountPanel.setLayout(discountPanelLayout);
         discountPanelLayout.setHorizontalGroup(
             discountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 932, Short.MAX_VALUE)
+            .addGap(0, 914, Short.MAX_VALUE)
         );
         discountPanelLayout.setVerticalGroup(
             discountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -981,10 +989,13 @@ public class Grocery extends javax.swing.JFrame {
         managementPanelLayout.setHorizontalGroup(
             managementPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(managementPanelLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
                 .addGroup(managementPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLayeredPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 890, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(managementPanelLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jLayeredPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 914, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(managementPanelLayout.createSequentialGroup()
+                        .addGap(106, 106, 106)
+                        .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 762, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         managementPanelLayout.setVerticalGroup(
@@ -994,7 +1005,7 @@ public class Grocery extends javax.swing.JFrame {
                 .addComponent(menuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
                 .addComponent(jLayeredPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         mainPanels.add(managementPanel, "card3");
@@ -1149,6 +1160,7 @@ public class Grocery extends javax.swing.JFrame {
     private void cornButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cornButtonActionPerformed
         jTextArea1.append(corn.toString());
         updateTotal(corn.getPrice());
+        inventory.decreaseQuantity("Corn");
         //subTotalLabel.setText(String.format("%.2f", potato.getPrice()));
     }//GEN-LAST:event_cornButtonActionPerformed
 
@@ -1289,6 +1301,11 @@ public class Grocery extends javax.swing.JFrame {
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         switchPanels(jLayeredPaneInventory, printInventoryPanel);
     }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void garlicButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_garlicButtonActionPerformed
+        jTextArea1.append(garlic.toString());
+        updateTotal(garlic.getPrice());
+    }//GEN-LAST:event_garlicButtonActionPerformed
     Inventory inventory= new Inventory();
     NewEmployee employeeList[] = new NewEmployee[99];
     int employeeNum= 0;
@@ -1299,7 +1316,7 @@ public class Grocery extends javax.swing.JFrame {
     Item lettuce = new Item("Lettuce", "0002", 1.05, 39);
     Item apple = new Item("Apple","0003", 0.50, 100);
     Item corn = new Item("Corn","0004", 0.50, 100);
-    //Item i = new Item("i","0005", 0.50, 100);
+    Item garlic = new Item("Garlic","0005", 0.50, 100);
     //Item i = new Item("i","0006", 0.50, 100);
     //Item i = new Item("i","0007", 0.50, 100); 
     //Item i = new Item("i","0008", 0.50, 100);

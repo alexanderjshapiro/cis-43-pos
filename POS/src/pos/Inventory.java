@@ -7,6 +7,8 @@ public class Inventory {
     public Inventory() {
         this.items.add(new Item("Apple", "4877326352", 0.55, 100));
         this.items.add(new Item("Tomato", "21366363636",0.5,50));
+        this.items.add(new Item("Corn", "21366363637",0.75,150));
+        this.items.add(new Item("Garlic","045888655",2.00,30));
     }
     
     
@@ -56,18 +58,5 @@ public class Inventory {
     }
 
 
-   /* public static void main(String[] args) {
-        Inventory inventory = new Inventory();
-        inventory.printInventory();
-        inventory.increaseQuantity("Book");
-        inventory.increaseQuantity("Pen");
-        inventory.printInventory();
-        inventory.decreaseQuantity("Book");
-        inventory.printInventory();
-        inventory.createItem("Pencil", "92827234534");
-        inventory.printInventory();
-        inventory.increaseQuantity("Pencil");
-        inventory.printInventory();
-    }
-*/
+   
 }
